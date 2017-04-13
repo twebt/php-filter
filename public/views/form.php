@@ -37,9 +37,9 @@
 		<div class="inner-header">
 			<h1 class="brand-title"><a href="http://forms.viscomp.fb">Formmail DB</a></h1>
 			<div class="row">
-				<form name="search_form" method="GET" class="filter-form">
+				<form name="search_form" method="GET" class="filter-form clearfix">
 					<!-- Filter By Server -->
-					<div class="col-md-2">
+					<div class="col-sm-4 col-md-6 col-lg-2">
 						<fieldset class="form-group">
 							<label for="server">Filter By Server: </label>
 							<select name="server" id="server" class="form-control">
@@ -60,7 +60,7 @@
 						</fieldset>
 					</div>
 					<!-- Filter By Domain -->
-					<div class="col-md-2">
+					<div class="col-sm-4 col-md-6 col-lg-2">
 						<fieldset class="form-group">
 							<div class="filter-domain">
 								<label for="domain">Filter By Domain: </label>
@@ -69,7 +69,7 @@
 						</fieldset>
 					</div>
 					<!-- Filter By Version -->
-					<div class="col-md-2">
+					<div class="col-sm-4 col-md-6 col-lg-2">
 						<fieldset class="form-group">
 							<label for="version">Filter By Version: </label>
 							<select name="version" id="version" class="form-control">
@@ -90,7 +90,7 @@
 						</fieldset>
 					</div>
 					<!-- Filter By Custom Form -->
-					<div class="col-md-2">
+					<div class="col-sm-4 col-md-6 col-lg-2">
 						<fieldset class="form-group">
 							<label for="custom_form">Filter By Custom Form: </label>
 							<select name="custom_form" id="custom_form" class="form-control">
@@ -112,7 +112,7 @@
 						</fieldset>
 					</div>
 					<!-- Filter By Framework -->
-					<div class="col-md-2">
+					<div class="col-sm-4 col-md-6 col-lg-2">
 						<fieldset class="form-group">
 							<div class="filter-framework">
 								<label for="by_framework">Filter By Framework: </label>
@@ -129,7 +129,7 @@
 						</fieldset>
 					</div>
 					<!-- Filter By Id -->
-					<div class="col-md-1">
+					<div class="col-sm-4 col-md-6 col-lg-1">
 						<fieldset class="form-group">
 							<div class="filter-id">
 								<label for="id">Filter By ID: </label>
@@ -137,14 +137,14 @@
 							</div>
 						</fieldset>
 					</div>
-					<div class="col-md-1">
+					<div class="col-sm-12 col-lg-1">
 						<button type="submit" class="btn btn-primary">FILTER</button>
 					</div>
 				</form>
 
 				<!-- Info Results -->
 				<div class="info-results">
-					<div class="col-md-6 results-left">
+					<div class="col-xs-6 results-left">
 						<div class="total-results">
 							<span class="sized"><?php ($filter->get_count()['domains'][0] > 1) ? $text_domain = 'domains' : $text_domain = 'domain'; echo 'Total: ' . $filter->get_count()['domains'][0] . ' ' . $text_domain; ?></span>
 						</div>
@@ -152,8 +152,8 @@
 						<div class="total-records"><span class="sized">Total Records: <?php echo $filter->get_count()['records'][0] ?></span></div>
 					</div>
 
-					<div class="col-md-6 pagination-right">
-						<div class="pagination-wrapper align-right">
+					<div class="col-xs-6 pagination-right">
+						<div class="pagination-wrapper">
 							<div class="pagination"><?php echo $paginator->pagination($filter->pagination_info(), $filter->get_parameters()); ?></div>
 						</div>
 					</div>

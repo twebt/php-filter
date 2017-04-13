@@ -1,28 +1,8 @@
 $(function() {
 
-	
-	/** 
-	 * Function sortDropDown() to sort dropdown options by text
-	*/
-	/*function sortDropDown(selectId) {
-	    var foption = $('#'+ selectId + ' option:first');
-	    var soptions = $('#'+ selectId + ' option:not(:first)').sort(function(a, b) {
-	       return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
-	    });
-
-	    $('#' + selectId).html(soptions).prepend(foption);              
-
-	};
-
-	sortDropDown('filter_server');
-	sortDropDown('filter_version');
-	sortDropDown('filter_cf');
-	*/
-
-
 	// Run function here
 	$(window).scroll(function() {
-		$('.filter-form').fixedFilter(1024);
+		$('.filter-form').fixedFilter(1200);
 		$('#toTop').showOrHideToTop(300);
 	});
 
@@ -37,11 +17,11 @@ $(function() {
 	$.fn.fixedFilter = function(resoluton) {
 
 		// set default value
-		resoluton = resoluton || 768;
+		resoluton = resoluton || 1200;
 
 		// check if resoluton is not a number or undefined
 		if (isNaN(resoluton) || typeof resoluton === undefined) {
-			resoluton = 768;
+			resoluton = 1200;
 		}
 
 		// scrollTop var
