@@ -6,8 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Database\\Database' => $baseDir . '/app/Database/Database.php',
-    'App\\Filters\\Database' => $baseDir . '/app/Filters/Database.php',
-    'App\\Filters\\OptionFilter' => $baseDir . '/app/Filters/OptionFilter.php',
-    'App\\Filters\\PaginationFilter' => $baseDir . '/app/Filters/PaginationFilter.php',
 );
