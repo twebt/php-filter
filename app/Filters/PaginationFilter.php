@@ -9,13 +9,11 @@ class PaginationFilter {
      */
     private $url = '?';
 
-
     /**
      * html
      *@var private
      */
     public $html = '';
-
 
     /**
      * links
@@ -23,8 +21,6 @@ class PaginationFilter {
      *@return array
      */
     private $links = array();
-
-
 
     /**
      * Generate filter links
