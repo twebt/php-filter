@@ -4,14 +4,11 @@ use App\Database\Database;
 
 class OptionFilter {
 
-
     /**
      * db
      * @var private
      */
     private $db;
-
-
 
     /**
      * array parameters
@@ -27,8 +24,6 @@ class OptionFilter {
         'page'        => 1
     );
 
-
-
     /**
      * limit
      * @var public
@@ -42,7 +37,6 @@ class OptionFilter {
         $this->db = $database->mysqli;
         $this->get_parameters();
     }
-
 
     /**
      * Get first 50 results from database
@@ -80,8 +74,6 @@ class OptionFilter {
         return $rows;
     }
 
-
-
     /**
      * These 3 columns will be filled into <select>
      * @return array
@@ -108,7 +100,6 @@ class OptionFilter {
         return $select_options;
     }
 
-
     /**
      * Get parameters and build SQL Query
      * @return string
@@ -132,7 +123,6 @@ class OptionFilter {
         return $sql;
     }
 
-
     /**
      * Get unique domains and total records in database
      * @return array
@@ -150,7 +140,6 @@ class OptionFilter {
         );
     }
 
-
     /**
      * Get url parameters and store them to array
      * @return array
@@ -163,7 +152,6 @@ class OptionFilter {
         }
         return $this->url_parameters;
     }
-
 
     /**
      * Get limit and offset
