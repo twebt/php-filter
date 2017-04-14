@@ -4,48 +4,13 @@ use App\Database\Database;
 
 class OptionFilter {
 
+
     /**
      * db
      * @var private
      */
     private $db;
 
-
-    /**
-     * filter_server
-     * @var public
-     */
-    private $filter_server = '';
-
-    /**
-     * filter_domain
-     * @var public
-     */
-    private $filter_domain = '';
-
-    /**
-     * filter_version
-     * @var public
-     */
-    private $filter_version = '';
-
-    /**
-     * filter_cf
-     * @var public
-     */
-    private $filter_cf = '';
-
-    /**
-     * filter_fw
-     * @var public
-     */
-    private $filter_fw = '';
-
-    /**
-     * filter_id
-     * @var public
-     */
-    private $filter_id = '';
 
 
     /**
@@ -63,6 +28,7 @@ class OptionFilter {
     );
 
 
+
     /**
      * limit
      * @var public
@@ -73,8 +39,7 @@ class OptionFilter {
      * Create new instance of database class
      */
     public function __construct(Database $database) {
-        $this->db = $database;
-        $this->db = $this->db->mysqli;
+        $this->db = $database->mysqli;
         $this->get_parameters();
     }
 
