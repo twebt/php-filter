@@ -1,9 +1,10 @@
 <?php
-namespace App\Database;
 
+namespace App\Database;
 use Mysqli;
 
-class Database {
+class Database 
+{
 
     protected $host;
     protected $user;

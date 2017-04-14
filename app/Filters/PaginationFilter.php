@@ -1,7 +1,9 @@
 <?php
+
 namespace App\Filters;
 
-class PaginationFilter {
+class PaginationFilter 
+{
 
     /**
      * url

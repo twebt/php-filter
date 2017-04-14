@@ -1,8 +1,10 @@
 <?php
+
 namespace App\Filters;
 use App\Database\Database;
 
-class OptionFilter {
+class OptionFilter 
+{
 
     /**
      * db
@@ -105,6 +107,7 @@ class OptionFilter {
      * @return string
      */
     private function filter_result() {
+
         $url_params = $this->get_parameters();
         unset($url_params['action']);
         unset($url_params['page']);
@@ -129,9 +132,7 @@ class OptionFilter {
      */
     public function get_count() {
 
-        $sql  = "SELECT COUNT(DISTINCT domain) FROM `forms` WHERE 1" . $this->filter_result();
-        $domains = $this->db->query($sql);
-
+        $domains = $this->db->query("SELECT COUNT(DISTINCT domain) FROM `forms` WHERE 1" . $this->filter_result());
         $records = $this->db->query("SELECT COUNT(domain) FROM `forms`");
         
         return array(
@@ -145,11 +146,13 @@ class OptionFilter {
      * @return array
      */
     public function get_parameters() {
+
         foreach ($this->url_parameters as $parameter => $value) {
             if (isset($_GET[$parameter]) && !empty($_GET[$parameter])) {
                 $this->url_parameters[$parameter] = trim($_GET[$parameter]);
             }
         }
+
         return $this->url_parameters;
     }
 
@@ -158,6 +161,7 @@ class OptionFilter {
      * @return array
      */
     public function pagination_info() { 
+
         return array(
             'url'    => $_SERVER['REQUEST_URI'],
             'page'   => $this->get_parameters()['page'],
