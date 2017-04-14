@@ -57,15 +57,15 @@ class OptionFilter {
 
         while ($stmt->fetch()) :
             $rows[] = [
-              'id'              =>  $id,
-              'server'          =>  $server,
-              'domain'          =>  $domain,
-              'paths'           =>  $paths,
-              'version'         =>  $version,
-              'actions'         =>  $actions,
-              'good_urls'       =>  $good_urls,
-              'mail_optionss'   =>  $mail_optionss,
-              'custom_form'     =>  $custom_form
+                'id'              =>  $id,
+                'server'          =>  $server,
+                'domain'          =>  $domain,
+                'paths'           =>  $paths,
+                'version'         =>  $version,
+                'actions'         =>  $actions,
+                'good_urls'       =>  $good_urls,
+                'mail_optionss'   =>  $mail_optionss,
+                'custom_form'     =>  $custom_form
             ];
         endwhile;
 
