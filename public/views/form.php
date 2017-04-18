@@ -167,14 +167,14 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th width="12%">Server</th>
+					<th width="9%">Server</th>
 					<th>Domain</th>
 					<th width="22%">Path</th>
 					<th>Version</th>
 					<th>Action</th>
 					<th>Good URL</th>
 					<th>Mail Options</th>
-					<th>Custom Form</th>
+					<th width="6%">Custom Form</th>
 				</tr>
 			</thead>
 			<tbody>
