@@ -25,6 +25,6 @@ $filter = new OptionFilter($database);
 $paginator = new PaginationFilter();
 
 /**
- * load view form.php
+ * load view layout.php
  */
-require 'public/views/form.php';
+require 'public/views/layout.php';

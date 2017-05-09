@@ -111,6 +111,7 @@ class OptionFilter
         $url_params = $this->get_parameters();
         unset($url_params['action']);
         unset($url_params['page']);
+        unset($url_params['domain']);
 
         $sql = '';
 
@@ -118,9 +119,13 @@ class OptionFilter
             if (!empty($value)) {
                 $sql .= " AND $mysql_field = '" . $value . "'";
             }
-            if (!empty($this->get_parameters()['action']) && $this->get_parameters()['action'] == 'yes') {
-               $sql .= " AND action LIKE '%_essentials%'";
-            }
+        }
+
+        if (!empty($this->get_parameters()['domain'])) {
+           $sql .= " AND domain LIKE '%" . $this->get_parameters()['domain'] . "%'";
+        }
+        if (!empty($this->get_parameters()['action']) && $this->get_parameters()['action'] == 'yes') {
+           $sql .= " AND action LIKE '%_essentials%'";
         }
 
         return $sql;
