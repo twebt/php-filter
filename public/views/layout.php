@@ -33,8 +33,8 @@
 <body> 
 	<div class="page-wrap">
 		
-		<?php require_once('filter.php'); ?>
-		<?php require_once('table.php'); ?>
+		<?php require_once('partials/filter.php'); ?>
+		<?php require_once('partials/table.php'); ?>
 
 		<!-- Pagination -->
 		<div class="pagination-wrapper align-right">
